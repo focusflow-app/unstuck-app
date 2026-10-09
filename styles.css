@@ -283,9 +283,55 @@ footer {
   font-weight: 700;
 }
 
+.waitlist-box {
+  padding: 60px 20px;
+  border-radius: 32px;
+  background-color: var(--warm-background);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .floating-elements {
     display: none;
+  }
+
+  .hero {
+    padding: 60px 0 80px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .features {
+    padding: 60px 0;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .waitlist {
+    padding: 60px 0;
+  }
+
+  .waitlist-box {
+    padding: 40px 16px;
+    border-radius: 24px;
+  }
+
+  .neo-btn {
+    width: 100%;
+  }
+
+  header .neo-btn {
+    width: auto;
+  }
+
+  .neo-input {
+    padding: 16px;
+    font-size: 1rem;
   }
 }
