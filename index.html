@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | The ADHD-First Productivity System</title>
+    <meta name="description" content="FocusFlow is the anti-productivity productivity app designed for ADHD brains. No streaks, no shame. Join the waitlist today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">✨</div>
+                FocusFlow
+            </a>
+            <a href="#waitlist" class="neo-btn secondary" style="padding: 10px 20px; font-size: 1rem;">Join Waitlist</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="floating-elements">
+                <div class="float-item float-1">Zero Shame</div>
+                <div class="float-item float-2">AI Slicer</div>
+                <div class="float-item float-3">Body Double</div>
+            </div>
+            
+            <div class="container hero-content">
+                <h1>Your brain doesn't work like theirs. <br>Your app shouldn't either.</h1>
+                <p>The ADHD-first ecosystem that slices tasks, provides on-demand body doubling, and resets your slate every single morning. No streaks. No guilt.</p>
+                <a href="#waitlist" class="neo-btn">Get Early Access</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 style="text-align: center;">How FocusFlow works with you, not against you.</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card neo-box">
+                        <div class="feature-icon">🔪</div>
+                        <h3>The AI Task Slicer</h3>
+                        <p>Got a terrifying "Clean Garage" goal? Tell our AI your energy level, and it slices it down into a tiny, doable 5-minute action.</p>
+                    </div>
+                    
+                    <div class="feature-card neo-box">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Body Doubling</h3>
+                        <p>Feel paralyzed? Enter a real-time Focus Mode with friends across Web and Mobile. Just presence, no talking required.</p>
+                    </div>
+                    
+                    <div class="feature-card neo-box">
+                        <div class="feature-icon">🔄</div>
+                        <h3>The Daily Reset</h3>
+                        <p>Missed a week? We don't care. No red notifications, no broken streaks. Every day starts completely fresh.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="waitlist" class="waitlist">
+            <div class="container neo-box" style="padding: 60px 20px; border-radius: 32px; background-color: var(--warm-background);">
+                <h2>Stop fighting your brain.</h2>
+                <p style="margin-top: 16px;">Join the waitlist to get exclusive early access to the FocusFlow Web and Android apps.</p>
+                
+                <form id="waitlist-form" class="waitlist-form">
+                    <input type="email" id="email" class="neo-input" placeholder="Enter your email address..." required>
+                    <button type="submit" class="neo-btn" id="submit-btn">Join the Waitlist</button>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 FocusFlow. Built for the scattered and brilliant.</p>
+        </div>
+    </footer>
+
+    <!-- Supabase JS Client via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+</body>
+</html>
