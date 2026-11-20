@@ -811,8 +811,188 @@ footer {
   color: #777777;
 }
 
+/* Download Section */
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+.download-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: white;
+}
+
+.card-badge {
+  position: absolute;
+  top: -16px;
+  left: 24px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 14px;
+  border-radius: 8px;
+  border: 2px solid var(--dark-accent);
+}
+
+.card-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.platform-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.card-meta {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #666;
+}
+
+.card-summary {
+  font-size: 0.95rem;
+  color: var(--dark-accent);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.download-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  text-align: center;
+  padding: 16px 20px;
+  background: var(--vibrant-teal);
+  color: var(--dark-accent);
+  margin-bottom: 28px;
+  text-decoration: none;
+}
+
+.download-btn .btn-subtext {
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.install-guide {
+  background: var(--warm-background);
+  border: 2px solid var(--dark-accent);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.install-guide h4 {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: 14px;
+  color: var(--dark-accent);
+}
+
+.steps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 0;
+}
+
+.steps-list li strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--dark-accent);
+  margin-bottom: 2px;
+}
+
+.steps-list li p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #555;
+  margin: 0;
+}
+
+.steps-list li code {
+  background: white;
+  border: 1px solid var(--dark-accent);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.8rem;
+  font-family: 'DM Mono', monospace;
+  font-weight: 700;
+}
+
+.badge-inline {
+  display: inline-block;
+  background: white;
+  border: 1.5px solid var(--dark-accent);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.card-footer-note {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  text-align: center;
+  margin-top: auto;
+}
+
+.card-footer-note a {
+  color: var(--dark-accent);
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.ios-dev-box {
+  background: white;
+  border: 2px dashed var(--dark-accent);
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.ios-dev-box strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.ios-dev-box p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.ios-dev-box code {
+  font-family: 'DM Mono', monospace;
+  font-weight: 700;
+  background: var(--warm-background);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+  .download-grid {
+    grid-template-columns: 1fr;
+  }
+
   .floating-elements {
     display: none;
   }

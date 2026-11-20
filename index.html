@@ -24,7 +24,8 @@
                 <span>UnStuck</span>
             </a>
             <div style="display: flex; gap: 12px; align-items: center;">
-                <a href="#waitlist" class="header-link">Android</a>
+                <a href="#download" class="header-link">📲 Download App</a>
+                <a href="#waitlist" class="header-link">Waitlist</a>
                 <a href="/" class="neo-btn secondary" style="padding: 10px 22px; font-size: 0.95rem;">Launch Web App</a>
             </div>
         </div>
@@ -107,8 +108,7 @@
 
                         <div class="hero-cta-group">
                             <a href="/" class="neo-btn">Launch Free Web App</a>
-                            <a href="#waitlist" class="neo-btn secondary" style="background: white;">Join Android
-                                Waitlist</a>
+                            <a href="#download" class="neo-btn secondary" style="background: var(--vibrant-yellow);">📲 Download APK & iOS</a>
                         </div>
                     </div>
         </section>
@@ -157,6 +157,121 @@
                                         </div>
                                     </div>
                                 </div>
+            </section>
+
+            <!-- SECTION: MOBILE DOWNLOAD & INSTALLATION PROCEDURES -->
+            <section id="download" class="download-section section-spacing">
+                <div class="container">
+                    <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                        <span class="highlight-yellow">📲 Direct Mobile Access</span>
+                        <h2>Take UnStuck Everywhere.</h2>
+                        <p class="subtitle" style="margin: 12px auto 0;">
+                            Native companion experience on Android and iOS. Direct download, zero ads, no subscription gates.
+                        </p>
+                    </div>
+
+                    <div class="download-grid">
+                        <!-- ANDROID DOWNLOAD CARD -->
+                        <div class="download-card neo-box">
+                            <div class="card-badge bg-teal">Android Native APK</div>
+                            <div class="card-header-inner">
+                                <span class="platform-icon">🤖</span>
+                                <div>
+                                    <h3>Android App (v1.0.0)</h3>
+                                    <p class="card-meta">APK Package • 11 MB • Android 8.0+</p>
+                                </div>
+                            </div>
+
+                            <p class="card-summary">
+                                Full Jetpack Compose companion UI, floating mascot, custom Pomodoro timer presets, and "+5m Flow" hyperfocus extensions.
+                            </p>
+
+                            <!-- Direct Download CTA -->
+                            <a href="UnStuck-FocusFlow.apk" download="UnStuck-FocusFlow.apk" class="neo-btn download-btn">
+                                <span>⬇️ Download Android APK</span>
+                                <span class="btn-subtext">(v1.0.0 Debug • 11 MB)</span>
+                            </a>
+
+                            <!-- Step-by-Step Installation Procedure -->
+                            <div class="install-guide">
+                                <h4>📋 How to Install on Android in 4 Steps:</h4>
+                                <ol class="steps-list">
+                                    <li>
+                                        <strong>1. Tap "Download Android APK" above</strong>
+                                        <p>Your browser downloads <code>UnStuck-FocusFlow.apk</code> directly.</p>
+                                    </li>
+                                    <li>
+                                        <strong>2. Tap "Download anyway"</strong>
+                                        <p>If Android warns <em>"File might be harmful"</em>, tap <strong>Download anyway</strong> (standard prompt for APKs outside Google Play).</p>
+                                    </li>
+                                    <li>
+                                        <strong>3. Allow unknown sources</strong>
+                                        <p>Tap the downloaded file. When prompted <em>"For security, your phone is not allowed to install unknown apps"</em>, tap <strong>Settings</strong> and switch on <strong>"Allow from this source"</strong>.</p>
+                                    </li>
+                                    <li>
+                                        <strong>4. Tap Install & Launch!</strong>
+                                        <p>Tap <strong>Install</strong> on the system prompt, then open the app. Your companion is ready!</p>
+                                    </li>
+                                </ol>
+                            </div>
+
+                            <div class="card-footer-note">
+                                <span>💡 Prefer Google Play? Join our <a href="#waitlist">Play Store waitlist</a> below.</span>
+                            </div>
+                        </div>
+
+                        <!-- IOS INSTALLATION CARD -->
+                        <div class="download-card neo-box">
+                            <div class="card-badge bg-yellow">iOS iPhone & iPad</div>
+                            <div class="card-header-inner">
+                                <span class="platform-icon">🍎</span>
+                                <div>
+                                    <h3>iOS App (Instant Install)</h3>
+                                    <p class="card-meta">Standalone PWA + SwiftUI Source • iOS 15+</p>
+                                </div>
+                            </div>
+
+                            <p class="card-summary">
+                                Add directly to your Home Screen with zero App Store lag, full offline caching, and fullscreen companion view.
+                            </p>
+
+                            <!-- iOS Launch / Install CTA -->
+                            <a href="/" class="neo-btn download-btn secondary" style="background: var(--vibrant-yellow);">
+                                <span>🚀 Open Web App in Safari</span>
+                                <span class="btn-subtext">(Instant 10-second home screen install)</span>
+                            </a>
+
+                            <!-- Step-by-Step Installation Procedure -->
+                            <div class="install-guide">
+                                <h4>📋 How to Add to iOS Home Screen:</h4>
+                                <ol class="steps-list">
+                                    <li>
+                                        <strong>1. Open UnStuck in Safari</strong>
+                                        <p>Open <code>focusflow</code> in Safari on your iPhone or iPad, or tap the button above.</p>
+                                    </li>
+                                    <li>
+                                        <strong>2. Tap the Share button</strong>
+                                        <p>In Safari's bottom toolbar, tap the <strong>Share icon</strong> (square with upward arrow).</p>
+                                    </li>
+                                    <li>
+                                        <strong>3. Select "Add to Home Screen"</strong>
+                                        <p>Scroll down the share sheet and tap <strong>"Add to Home Screen"</strong> (➕).</p>
+                                    </li>
+                                    <li>
+                                        <strong>4. Tap "Add" (Top Right)</strong>
+                                        <p>UnStuck instantly appears on your iOS home screen as a standalone, fullscreen app with the mascot icon!</p>
+                                    </li>
+                                </ol>
+                            </div>
+
+                            <!-- Native Xcode Build Note -->
+                            <div class="ios-dev-box">
+                                <strong>🛠️ Native SwiftUI Developer Project:</strong>
+                                <p>Native iOS SwiftUI project available in repo at <code>ios/FocusFlow.xcodeproj</code>. Open in Xcode and press Run (⌘R) to test on device or simulator.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
                 <!-- SECTION 3: FAST START CTA & WAITLIST -->
