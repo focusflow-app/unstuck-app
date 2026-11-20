@@ -1,196 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnStuck | The Two-Brain Productivity System</title>
-    <meta name="description" content="Plan on your computer. Execute on your phone. UnStuck is the anti-productivity productivity app designed for ADHD brains.">
+    <title>UnStuck | Your ADHD Focus Companion</title>
+    <meta name="description"
+        content="Less like another task planner, more like a friendly focus companion that stays beside you — helping you start, continue, and return without guilt.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800;900&family=DM+Mono:wght@500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="container header-content">
             <a href="#" class="logo">
-                <img src="unstuck-logo.png" alt="UnStuck Logo" style="width: 28px; height: 28px; border-radius: 6px; margin-right: 8px;">
-                UnStuck
+                <img src="unstuck-logo.png" alt="UnStuck Logo"
+                    style="width: 32px; height: 32px; border-radius: 8px; margin-right: 10px; border: 2px solid var(--dark-accent);">
+                <span>UnStuck</span>
             </a>
-            <a href="https://unstuck-web-app.vercel.app/" class="neo-btn secondary" style="padding: 10px 20px; font-size: 1rem;">Try Web</a>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <a href="#waitlist" class="header-link">Android</a>
+                <a href="/" class="neo-btn secondary" style="padding: 10px 22px; font-size: 0.95rem;">Launch Web App</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- Section 1: The Hero Section -->
+        <!-- SECTION 1: HERO & INTERACTIVE COMPANION DEMO -->
         <section class="hero">
             <div class="floating-elements">
-                <div class="float-item float-1">Zero Shame</div>
-                <div class="float-item float-2">No Streaks</div>
-                <div class="float-item float-3">Instant Focus</div>
+                <div class="float-item float-1">Zero Guilt 💛</div>
+                <div class="float-item float-2">No Streak Shame</div>
+                <div class="float-item float-3">Friendly Companion 👾</div>
             </div>
-            
+
+
             <div class="container hero-content">
-                <h1>Plan on your computer.<br>Execute on your phone.</h1>
-                <h2>Finally, a productivity system that doesn't distract you.</h2>
-                <p>You don't need to organize your entire life before you can begin. UnStuck helps you find your next manageable action.</p>
-                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://unstuck-web-app.vercel.app/" class="neo-btn">Try Web</a>
-                    <a href="#waitlist" class="neo-btn secondary" style="background: white; color: var(--vibrant-dark);">Android Waitlist</a>
-                </div>
-                <div class="logical-bridge">
-                    <p class="bridge-text">Why does every other app feel like a second job? ↓</p>
-                </div>
-            </div>
+                    <div class="hero-badge">
+                        <span>✨ ADHD-First Productivity</span>
+                    </div>
+        <h1>Your Focus Companion.<br>Not Another Task Manager.</h1>
+        <p class="hero-subtext">
+            You don't need a smarter task slicer. You need a teammate that sits with you, helps you start, reminds you
+            to drink water, and celebrates every little win.
+        </p>
+
+                            <!-- INTERACTIVE LIVE COMPANION DEMO CARD -->
+                            <div class="demo-card neo-box">
+                                <div class="demo-header">
+                                    <div class="companion-avatar" id="demo-companion">
+                                        <span id="companion-face" class="companion-face">😊</span>
+                                        <span class="companion-pulse"></span>
+                                    </div>
+                                        <div class="companion-speech" id="companion-speech">
+                                            "Hey! What are you avoiding right now? Type it below — I'll find a tiny
+                                            first step we can do together."
+                                        </div>
+                                    </div>
+
+                                    <!-- Instant "What are you avoiding?" Box -->
+                                    <form id="instant-slice-form" class="avoid-form">
+                                        <div class="input-wrap">
+                                            <input type="text" id="avoid-input" class="avoid-input"
+                                                placeholder="e.g., Clean my desk, write history essay, do taxes..."
+                                                required />
+                                            <button type="submit" class="slice-btn" id="slice-btn">
+                                                <span>UnStuck Me</span>
+                                                <span class="btn-arrow">→</span>
+                                            </button>
+                                        </div>
+                                    </form>
+
+                                            <!-- Instant Result Preview -->
+                                            <div id="slice-result" class="slice-result" style="display: none;">
+                                                <div class="step-badge">Tiny 2-Minute Physical Step:</div>
+                                                <h4 id="result-step-title" class="result-step-title">Open the document
+                                                    and write 1 word.</h4>
+                                                <p id="result-step-desc" class="result-step-desc">That's it. Nothing
+                                                    else. Bypassing ADHD initiation paralysis.</p>
+                                                <div class="demo-actions">
+                                                    <button type="button" class="action-pill active"
+                                                        id="demo-timer-btn">⏱️ Start 25m Pomodoro with Mascot</button>
+                                                    <button type="button" class="action-pill" id="demo-water-btn">💧
+                                                        Remind me to drink water</button>
+                                                </div>
+                                            </div>
+
+                        <!-- Mood switcher pills -->
+                        <div class="mood-switcher">
+                            <span class="mood-title">Test mascot expressions:</span>
+                            <div class="mood-pills">
+                                <button type="button" class="mood-btn active" data-mood="idle">😊 Ready</button>
+                                <button type="button" class="mood-btn" data-mood="focus">🧠 In Flow</button>
+                                <button type="button" class="mood-btn" data-mood="break">☕ Break Time</button>
+                                <button type="button" class="mood-btn" data-mood="celebrating">🎉 Won Win</button>
+                                <button type="button" class="mood-btn" data-mood="lowEnergy">😴 Low Battery</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                        <div class="hero-cta-group">
+                            <a href="/" class="neo-btn">Launch Free Web App</a>
+                            <a href="#waitlist" class="neo-btn secondary" style="background: white;">Join Android
+                                Waitlist</a>
+                        </div>
+                    </div>
         </section>
 
-        <!-- Section 2: The Paradigm Shift (Two-Brain) -->
-        <section class="paradigm-shift section-spacing">
-            <div class="container">
-                <div class="section-header">
-                    <h2>The "Two-Brain" Architecture</h2>
-                    <p class="subtitle">Standard tools fail because they mix complex planning with active execution, creating cognitive overload.</p>
-                </div>
+            <!-- SECTION 2: THE 3 PILLARS THAT ACTUALLY HELP ADHD BRAINS -->
+            <section class="pillars section-spacing">
+                <div class="container">
+                            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                                <h2>Built for how ADHD brains work.</h2>
+                                <p class="subtitle" style="margin: 12px auto 0;">No complex Kanban boards or rigid
+                                    routines you abandon by day 3.</p>
+                            </div>
 
-                <div class="two-brain-grid">
-                    <div class="brain-card neo-box">
-                        <div class="brain-header web">
-                            <span class="icon">💻</span>
-                            <h3>The Web Command Center</h3>
-                        </div>
-                        <div class="brain-body">
-                            <p><strong>Storage & Planning.</strong> This is where you handle the heavy lifting: complex dashboards, project organization, calendar views, and messy inbox dumps.</p>
-                        </div>
-                    </div>
+                            <div class="pillars-grid">
+                                <!-- Pillar 1 -->
+                                <div class="pillar-card neo-box">
+                                    <div class="pillar-icon bg-yellow">⏱️</div>
+                                    <h3>Flexible Focus Modes</h3>
+                                    <p>Some days you need a 2-minute tiny start to beat paralysis. Other days you
+                                        hyperfocus for 50 uninterrupted minutes. UnStuck supports <strong>Tiny Sprints
+                                            (5m)</strong>, <strong>Classic Pomodoro (25/5)</strong>, <strong>Deep Work
+                                            (50m)</strong>, and <strong>Open Flow</strong> with session extensions.</p>
+                                    <div class="pillar-tag">Never interrupts hyperfocus</div>
+                                </div>
 
-                    <div class="brain-vs">
-                        <span class="vs-badge neo-box">VS</span>
-                    </div>
+                                    <!-- Pillar 2 -->
+                                    <div class="pillar-card neo-box">
+                                        <div class="pillar-icon bg-teal">💧</div>
+                                        <h3>"Take Care of Me" Reminders</h3>
+                                        <p>ADHD brains easily forget physical bodies during deep flow. Our customizable,
+                                            non-intrusive nudges gently remind you to <strong>drink water</strong>,
+                                            <strong>take eye rests</strong>, and <strong>stretch</strong> without
+                                            shaming you or disrupting your focus.</p>
+                                        <div class="pillar-tag">Snoozeable & respectful</div>
+                                    </div>
 
-                    <div class="brain-card neo-box">
-                        <div class="brain-header mobile">
-                            <span class="icon">📱</span>
-                            <h3>The Android Execution Engine</h3>
-                        </div>
-                        <div class="brain-body">
-                            <p><strong>Anti-Distraction Action.</strong> Phones are for doing, not planning. A rigid 4-screen architecture designed specifically to prevent cognitive clutter and doom-scrolling. Open it to do exactly one thing at a time.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="logical-bridge">
-                    <p class="bridge-text">But what if you only want one app? No problem. ↓</p>
-                </div>
-            </div>
-        </section>
+                                        <!-- Pillar 3 -->
+                                        <div class="pillar-card neo-box">
+                                            <div class="pillar-icon bg-red">🐣</div>
+                                            <h3>Zero-Shame Mascot Growth</h3>
+                                            <p>We removed punishing streaks and replaced them with <strong>dopamine-rich
+                                                    comeback rewards</strong>. Your companion evolves and unlocks
+                                                accessories as you complete sessions. Missed a week? Welcome back with
+                                                open arms, zero guilt.</p>
+                                            <div class="pillar-tag">No streak anxiety</div>
+                                        </div>
+                                    </div>
+                                </div>
+            </section>
 
-        <!-- Section 3: Play It Your Way -->
-        <section class="play-it-your-way section-spacing bg-teal">
-            <div class="container neo-box waitlist-box">
-                <h2 style="text-align: center;">The Two-Brain System is a superpower.<br>Not a requirement.</h2>
-                <p style="text-align: center; max-width: 800px; margin: 24px auto;">UnStuck leaves you in control and adapts to your available energy and preferences.</p>
-                
-                <div class="features-grid" style="margin-top: 40px;">
-                    <div class="feature-card">
-                        <h3 class="highlight-yellow">The Mobile-Only Pitch</h3>
-                        <p>Just need a pocket-sized action engine? Use the Android app entirely on its own. Capture thoughts on the go, let the AI slice them, and execute instantly.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <h3 class="highlight-yellow">The Web-Only Pitch</h3>
-                        <p>Never leave your desk? The Web dashboard contains its own minimal Focus Mode route. Plan, organize, and execute all from one browser tab.</p>
-                    </div>
-                </div>
+                <!-- SECTION 3: FAST START CTA & WAITLIST -->
+                <section id="waitlist" class="waitlist section-spacing">
+                    <div class="container">
+                                <div class="neo-box waitlist-box">
+                                    <span class="waitlist-eyebrow">🚀 Ready to start?</span>
+                                    <h2>Start your first supported session in 30 seconds.</h2>
+                                    <p style="margin: 16px auto 32px; max-width: 640px;">
+                                        The full web experience is completely free. Plan with your companion, run
+                                        Pomodoro sessions, and build focus momentum today.
+                                    </p>
 
-                <div class="logical-bridge" style="margin-top: 40px;">
-                    <p class="bridge-text" style="color: var(--dark-accent);">So how do you get started? ↓</p>
-                </div>
-            </div>
-        </section>
+                                    <div
+                                        style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                                        <a href="/" class="neo-btn" style="font-size: 1.15rem;">Open UnStuck Web App</a>
+                                    </div>
 
-        <!-- Section 4: Workflow -->
-        <section class="workflow section-spacing">
-            <div class="container">
-                <h2 style="text-align: center;">Frictionless transition from intention to action.</h2>
-                
-                <div class="workflow-steps">
-                    <div class="step-card neo-box">
-                        <div class="step-icon bg-yellow">1</div>
-                        <div class="step-content">
-                            <h3>The AI Slicer in Action</h3>
-                            <p>Capture a messy, overwhelming thought in natural language. Our AI immediately transforms it into a concrete, right-sized 5-minute micro-step.</p>
-                        </div>
-                    </div>
+                                    <div class="divider-line">
+                                        <span>OR JOIN ANDROID WAITLIST</span>
+                                    </div>
 
-                    <div class="step-card neo-box">
-                        <div class="step-icon bg-teal">2</div>
-                        <div class="step-content">
-                            <h3>The Instant Sync</h3>
-                            <p>Because both platforms share the same backend, finishing a micro-step on mobile instantly updates the Web dashboard's insights and marks the task complete. Zero administrative bookkeeping.</p>
-                        </div>
-                    </div>
-
-                    <div class="step-card neo-box">
-                        <div class="step-icon bg-red">3</div>
-                        <div class="step-content">
-                            <h3>Automatic Body Doubling</h3>
-                            <p>Built-in, zero-effort social accountability. When you start focusing on Android, your friends on the Web instantly see your live status flip to "FOCUSING".</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="logical-bridge">
-                    <p class="bridge-text">What happens when you inevitably fall behind? ↓</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Zero-Shame Guarantee -->
-        <section class="zero-shame section-spacing bg-warm">
-            <div class="container">
-                <div class="shame-content neo-box">
-                    <h2>The "Zero-Shame" Guarantee</h2>
-                    <p class="subtitle">You've been burned by gamified apps that punish you for falling off the wagon. We don't do that here.</p>
-                    
-                    <div class="guarantee-grid">
-                        <div class="guarantee-item">
-                            <span class="icon">🚫</span>
-                            <h4>The Anti-Streak Promise</h4>
-                            <p>UnStuck has no punitive streaks, no overdue-task shame spirals, and absolutely no guilt-inducing red notification badges.</p>
-                        </div>
-                        <div class="guarantee-item">
-                            <span class="icon">🔄</span>
-                            <h4>The Return Loop</h4>
-                            <p>Our Intervention Engine welcomes you back after interruptions, distractions, or weeks of inactivity without requiring you to clear out a massive backlog.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Waitlist CTA -->
-        <section id="waitlist" class="waitlist section-spacing">
-            <div class="container neo-box waitlist-box">
-                <h2>Take it on the go.</h2>
-                <p style="margin-top: 16px;">The Web App is live. Join the waitlist below to get exclusive early access to the upcoming UnStuck Android app.</p>
-                
-                <form id="waitlist-form" class="waitlist-form">
-                    <input type="email" id="email" class="neo-input" placeholder="Enter your email address..." required>
-                    <button type="submit" class="neo-btn" id="submit-btn">Join Android Waitlist</button>
-                    <div id="form-message" class="form-message"></div>
-                </form>
-            </div>
-        </section>
+                                    <form id="waitlist-form" class="waitlist-form">
+                                        <input type="email" id="email" class="neo-input"
+                                            placeholder="Enter your email for Android early access..." required>
+                                        <button type="submit" class="neo-btn secondary" id="submit-btn"
+                                            style="background: var(--vibrant-yellow);">Get Android Invite</button>
+                                        <div id="form-message" class="form-message"></div>
+                                    </form>
+                                </div>
+                            </div>
+                </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>© 2026 UnStuck. Built for the scattered and brilliant.</p>
-        </div>
+            <div class="container footer-content">
+                <div class="footer-left">
+                    <img src="unstuck-logo.png" alt="UnStuck Logo"
+                        style="width: 24px; height: 24px; border-radius: 6px; margin-right: 8px;">
+                    <strong>UnStuck</strong> — Focus companionship for the scattered and brilliant.
+                </div>
+                <div class="footer-right">
+                    <p>© 2026 UnStuck. No streaks. Zero guilt.</p>
+                </div>
+            </div>
     </footer>
 
     <!-- Supabase JS Client via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
